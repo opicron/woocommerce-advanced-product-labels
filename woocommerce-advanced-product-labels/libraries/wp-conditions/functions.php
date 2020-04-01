@@ -39,6 +39,7 @@ require_once 'conditions/wpc-height-condition.php';
 require_once 'conditions/wpc-stock-status-condition.php';
 require_once 'conditions/wpc-stock-condition.php';
 require_once 'conditions/wpc-category-condition.php';
+require_once 'conditions/wpc-brand-condition.php';
 require_once 'conditions/wpc-volume-condition.php';
 
 // Product (single based)
@@ -46,6 +47,7 @@ require_once 'conditions/wpc-product-condition.php';
 require_once 'conditions/wpc-product-age-condition.php';
 require_once 'conditions/wpc-product-type-condition.php';
 require_once 'conditions/wpc-product-category-condition.php';
+require_once 'conditions/wpc-product-brand-condition.php';
 require_once 'conditions/wpc-product-shipping-class-condition.php';
 require_once 'conditions/wpc-product-tag-condition.php';
 require_once 'conditions/wpc-product-height-condition.php';
@@ -107,6 +109,7 @@ if ( ! function_exists( 'wpc_get_registered_conditions' ) ) {
 			new WPC_Product_Stock_Status_Condition(),
 			new WPC_Product_Stock_Condition(),
 			new WPC_Product_Category_Condition(),
+			new WPC_Product_Brand_Condition(),
 			new WPC_Product_Shipping_Class_Condition(),
 			new WPC_Product_Tag_Condition(),
 			new WPC_Product_Price_Condition(),

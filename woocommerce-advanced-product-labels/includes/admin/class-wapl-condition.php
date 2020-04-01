@@ -104,6 +104,7 @@ class WAPL_Condition {
 			__( 'Conditions', 'woocommerce-advanced-product-labels' ) => array(
 				'in_sale'      => __( 'On sale', 'woocommerce-advanced-product-labels' ),
 				'category'     => __( 'Product category', 'woocommerce-advanced-product-labels' ),
+				'brand'     	=> __( 'Product brand', 'woocommerce-advanced-product-labels' ),
 				'product'      => __( 'Product', 'woocommerce-advanced-product-labels' ),
 				'product_type' => __( 'Product type', 'woocommerce-advanced-product-labels' ),
 				'bestseller'   => __( 'Bestsellers', 'woocommerce-advanced-product-labels' ),

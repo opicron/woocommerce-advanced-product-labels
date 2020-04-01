@@ -22,6 +22,7 @@ class WAPL_Match_Conditions {
 	public function __construct() {
 
 		add_filter( 'wapl_match_conditions_product', array( $this, 'condition_match_product' ), 10, 3 );
+		add_filter( 'wapl_match_conditions_brand', array( $this, 'condition_match_product_brand' ), 10, 3 );
 		add_filter( 'wapl_match_conditions_category', array( $this, 'condition_match_product_category' ), 10, 3 );
 		add_filter( 'wapl_match_conditions_product_type', array( $this, 'condition_match_product_type' ), 10, 3 );
 		add_filter( 'wapl_match_conditions_in_sale', array( $this, 'condition_match_in_sale' ), 10, 3 );
@@ -87,7 +88,7 @@ class WAPL_Match_Conditions {
 		return $match;
 	}
 
-
+	
 	/**
 	 * Match featured.
 	 *
@@ -151,6 +152,11 @@ class WAPL_Match_Conditions {
 
 	public function condition_match_product_category( $match, $operator, $value ) {
 		$condition = wpc_get_condition( 'product_category' );
+		return $condition->match( $match, $operator, $value );
+	}
+
+	public function condition_match_product_brand( $match, $operator, $value ) {
+		$condition = wpc_get_condition( 'product_brand' );
 		return $condition->match( $match, $operator, $value );
 	}
 
